@@ -1,4 +1,3 @@
-import './style.css'
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
 
 const supabaseUrl = 'https://oyckrchotzjxbodewnje.supabase.co'
@@ -59,20 +58,4 @@ form.addEventListener('submit', async (e) => {
   }
 })
 
-fetchArticles()  if (isBirthdayToday) {
-    message += `<br><br>🎉 Wszystkiego najlepszego!`
-  } else {
-    if (weeksUntilBirthday === 0) {
-      message += `<br><br>🎂 Masz urodziny w tym tygodniu!`
-    } else {
-      message += `<br><br>Do Twoich urodzin pozostało <strong>${weeksUntilBirthday}</strong> tygodni.`
-    }
-  }
-
-  dialogText.innerHTML = message
-  dialog.showModal()
-})
-
-closeBtn.addEventListener('click', () => {
-  dialog.close()
-})
+fetchArticles()
