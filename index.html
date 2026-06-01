@@ -1,45 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 5</title>
-    <script type="module" crossorigin src="/lab-5/assets/index-Brs6VYYD.js"></script>
-    <link rel="stylesheet" crossorigin href="/lab-5/assets/index-BjS5k7-C.css">
-  </head>
-  <body class="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 6</title>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+  <div class="max-w-4xl mx-auto py-10 px-4">
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Portal Informacyjny</h1>
+    </header>
 
-    <h1 class="text-2xl font-bold text-primary mb-6">
-      Kalkulator dni od urodzin
-    </h1>
+    <main id="articles-container" class="space-y-6">
+      <div class="text-center text-gray-500 py-10">Ładowanie...</div>
+    </main>
 
-    <form id="birthdayForm" class="flex flex-col gap-4 items-center">
-      <label for="birthday">Wybierz dzień i miesiąc urodzenia:</label>
-      <input
-        type="date"
-        id="birthday"
-        class="border rounded p-2"
-        required
-      />
-      <button
-        type="submit"
-        class="bg-blue-300 p-4 rounded hover:bg-blue-400 transition"
-      >
-        Sprawdź
-      </button>
-    </form>
+    <hr class="my-12 border-gray-300">
 
-   <dialog id="resultDialog" class="bg-gray-200 rounded-lg p-6 max-w-sm w-full">
-  <div class="flex justify-end">
-    <button
-      id="closeDialog"
-      class="text-gray-600 hover:text-black text-xl font-bold"
-    >
-      ✕
-    </button>
+    <section class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Dodaj nowy artykuł</h2>
+      <form id="add-article-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Autor</label>
+          <input type="text" id="author-input" required class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Tytuł</label>
+          <input type="text" id="title-input" required class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Podtytuł</label>
+          <input type="text" id="subtitle-input" required class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Treść artykułu</label>
+          <textarea id="content-input" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg cursor-pointer">
+          Opublikuj artykuł
+        </button>
+      </form>
+    </section>
   </div>
-  <p id="dialogText" class="text-red-600 text-center text-lg"></p>
-</dialog>
-
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
