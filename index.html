@@ -12,9 +12,11 @@
       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Portal Informacyjny</h1>
     </header>
 
-    <main id="articles-container" class="space-y-6">
-      <div class="text-center text-gray-500 py-10">Ładowanie...</div>
-    </main>
+    <div class="text-xs text-gray-400 font-medium mb-4">
+  <address class="not-italic inline">Autor: <strong class="text-gray-700">${article.author || 'Anonim'}</strong></address>
+  <span>•</span>
+  <time datetime="${article.created_at || ''}">Dodano: ${date}</time>
+</div>
 
     <hr class="my-12 border-gray-300">
 
